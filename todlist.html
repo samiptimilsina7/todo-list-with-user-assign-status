@@ -29,7 +29,7 @@
             <div class="left-box newtaskform">
                 <div class="logo">
                     <a href="#">
-                        <img src="/images/todolist.png" alt="todolist logo">
+                        <img src="/images/todolist-white.png" alt="todolist logo">
                         <h1>To Do</h1>
                     </a>
                 </div>
@@ -39,28 +39,29 @@
                         <label for="id"></label>
                         <input type="text" id="id" placeholder="ID" class="display-none">
                         <label for="title"></label>
-                        <input type="text" id="title" placeholder="Title">
+                        <input type="text" id="title" placeholder="Title"><br>
                         <label for="description"></label>
                         <input type="text" id="description" placeholder="Description">
                         <div class="task-status">
                             <h5>Task Status</h5>
                             <input type="radio" id="recent" name="status" checked>
                             <label for="recent">Recent</label>
-                            <input type="radio" id="onprogress" name="status"><br>
+                            <input type="radio" id="onprogress" name="status">
                             <label for="onprogress">On progress</label>
                             <input type="radio" id="complete" name="status">
                             <label for="recent">Complete</label>
                         </div>
                         <div class="assigntask">
+                            <p>User Assign: </p>
                             <select name="userassign" id="userassign">
-                                <option value="ram">Ram</option>
-                                <option value="shyam">Shyam</option>
-                                <option value="hari">Hari</option>
+                                <option value="Ram">Ram</option>
+                                <option value="Shyam">Shyam</option>
+                                <option value="Hari">Hari</option>
                             </select>
                         </div>
                     </form>
                     <button onclick="addTask()">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-tasks"></i>
                         <p>New task</p>
                     </button>
                     <button onclick="saveTask()" class="display-none">
@@ -71,6 +72,15 @@
             </div>
         </div>
         <div class="right-section-area">
+            <div class="heading">
+                <img src="/images/check.png" alt="check sign">
+                <h1>Daily Tasks</h1>
+            </div>
+            <div class="task-status-titles">
+                <p>Recent</p>
+                <p>On Progress</p>
+                <p>Completed</p>
+            </div>
             <div class="task-categories">
                 <div class="taskstatus recent">
                     <!-- <div class="box">
@@ -78,8 +88,10 @@
                         <h2>${item.title}</h2>
                         <p>${item.description}</p>
                         <p>Assigned to: ${item.userAssign}</p>
-                        <button onclick="editTask(${index})">Edit</button>
-                        <button onclick="deleteTask(${index})">Delete</button>
+                        <div class="button">
+                            <button onclick="editTask(${index})">Edit</button>
+                            <button onclick="deleteTask(${index})">Delete</button>
+                        </div>
                     </div> -->
                 </div>
                 <div class="taskstatus onprogress"></div>

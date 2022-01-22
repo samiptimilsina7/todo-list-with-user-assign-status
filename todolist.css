@@ -8,7 +8,8 @@
 
 section{
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
 }
 
 .left-section-area{
@@ -55,6 +56,17 @@ section{
     align-items: center;
 }
 
+.left-text-button-area h3{
+    font-size: 24px;
+    letter-spacing: 0.7px;
+}
+
+.left-text-button-area input[type=text]{
+    padding: 5px 5px;
+    width: 90%;
+    border-radius: 3px;
+}
+
 button{
     outline: none;
     cursor: pointer;
@@ -79,16 +91,74 @@ button .fas{
     margin-right: 5px;
 }
 
+button .fa-tasks{
+    line-height: 18px;
+}
+
 .newtaskform{
-    background-color: tomato;
+    /* background-color: #f3f3f3; */
+    background-color: #3791e6;
     /* background-color: #f3f3f3; */
     z-index: 1;
     transform: translateX(-110%);
     transition: 0.5s ease-in 0.2s;
     /* position: absolute; */
+    color: white;
+}
+
+.newtaskform h1, select{
+    color: white;
+}
+
+select{
+    background-color: #1668b4;
+    padding: 2px 2px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    outline: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.task-status h5{
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.task-status label{
+    margin-right: 3px;
+}
+
+.assigntask{
+    display: flex;
+}
+
+.assigntask p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-right: 5px;
+    line-height: 20px;
+}
+
+.newtaskform h3, input[type=text], .task-status, .assigntask{
+    margin-bottom: 15px;
+}
+
+.newtaskform h3, form{
+    width: 80%;
+}
+
+.newtaskform button{
+    background: white;
+    /* color: black; */
+    color: #1668b4;
 }
 
 .taskbutton{
+    /* background-color: #1b73c5; */
     background-color: #f3f3f3;
     /* position: absolute; */
 }
@@ -99,22 +169,113 @@ button .fas{
 
 .right-section-area{
     width: 72%;
+    height: 100vh;
+    overflow: scroll;
 }
 
+
+
 .task-categories{
-    height: 100%;
+    /* height: 74%; */
     display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
 }
 
 .task-categories .taskstatus{
-    width: 24%;
+    width: 30%;
     display: flex;
     flex-direction: column;
+}
+
+.box{
+    padding: 20px 20px;
+    width: 100%;
+    height: 300px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.box h2{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.box p{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.box div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box .description{
+    height: 100px;
+}
+
+.box button{
+    margin-right: 10px;
+    margin-top: 0;
 }
 
 .display-none{
     display: none;
 }
+
+.right-section-area .heading{
+    display: flex;
+    height: 18%;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1{
+    font-size: 32px;
+    font-weight: 1000;
+    letter-spacing: 0.8px;
+}
+
+.right-section-area img{
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+}
+
+.task-status-titles{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 30px;
+}
+
+.task-status-titles p{
+    width: 30%;
+    font-size: 24px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    background-color: #f3f3f3;
+    padding: 7px 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
 
 
 

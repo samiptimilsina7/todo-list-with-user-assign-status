@@ -26,36 +26,39 @@ function displayTask(){
             document.querySelector(".task-categories .recent").innerHTML+=
             `
             <div class="box">
-                <h1>Task Number ${item.id}</h1>
                 <h2>${item.title}</h2>
-                <p>${item.description}</p>
+                <p class="description">${item.description}</p>
                 <p>Assigned to: ${item.userAssign}</p>
-                <button onclick="editTask(${index})">Edit</button>
-                <button onclick="deleteTask(${item.id})">Delete</button>
+                <div>
+                    <button onclick="editTask(${index})">Edit</button>
+                    <button onclick="deleteTask(${item.id})">Delete</button>
+                </div>
             </div>          
             `            
         } else if (item.taskStatus==="onprogress") {
             document.querySelector(".task-categories .onprogress").innerHTML+=
             `
             <div class="box">
-                <h1>Task Number ${item.id}</h1>
                 <h2>${item.title}</h2>
-                <p>${item.description}</p>
+                <p class="description">${item.description}</p>
                 <p>Assigned to: ${item.userAssign}</p>
-                <button onclick="editTask(${index})">Edit</button>
-                <button onclick="deleteTask(${item.id})">Delete</button>
+                <div>
+                    <button onclick="editTask(${index})">Edit</button>
+                    <button onclick="deleteTask(${item.id})">Delete</button>
+                </div>
             </div>          
             `  
         } else {
             document.querySelector(".task-categories .completed").innerHTML+=
             `
             <div class="box">
-                <h1>Task Number ${item.id}</h1>
                 <h2>${item.title}</h2>
-                <p>${item.description}</p>
+                <p class="description">${item.description}</p>
                 <p>Assigned to: ${item.userAssign}</p>
-                <button onclick="editTask(${index})">Edit</button>
-                <button onclick="deleteTask(${item.id})">Delete</button>
+                <div>
+                    <button onclick="editTask(${index})">Edit</button>
+                    <button onclick="deleteTask(${item.id})">Delete</button>
+                </div>
             </div>          
             `  
         }
