@@ -4,6 +4,10 @@ let descriptionEl=''
 let taskStatusEL=''
 let userAssignEL=''
 
+document.querySelector(".left-text-button-area #title").value=null;
+document.querySelector(".left-text-button-area #description").value=null;
+document.querySelector(".left-text-button-area #recent").checked=true;
+
 const slidingform=()=>{
     document.querySelector(".newtaskform").classList.add("sliding-transition")
 }
@@ -15,6 +19,8 @@ const addTask=()=>{
     userAssignEL=document.querySelector("select[name=userassign]").value;
     task.push({id:task.length+1,title:titleEL,description:descriptionEl,taskStatus:taskStatusEL,userAssign:userAssignEL})
     displayTask();
+    document.querySelector(".left-text-button-area #title").value=null;
+    document.querySelector(".left-text-button-area #description").value=null;
 }
 
 function displayTask(){
@@ -101,4 +107,7 @@ const saveTask=()=>{
     task[arrayIndex].taskStatus=document.querySelector(".left-text-button-area input[type=radio]:checked").id;
     task[arrayIndex].userAssign=document.querySelector("select[name=userassign]").value;
     displayTask();
+
+    document.querySelector(".left-text-button-area #title").value=null;
+    document.querySelector(".left-text-button-area #description").value=null;
 }
