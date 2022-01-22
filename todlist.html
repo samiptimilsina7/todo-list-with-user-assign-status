@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List with User Assign, Task Status</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+    <section>
+        <div class="left-section-area">
+            <div class="left-box taskbutton">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/images/todolist.png" alt="todolist logo">
+                        <h1>To Do</h1>
+                    </a>
+                </div>
+                <div class="left-text-button-area">
+                    <h3>Thinking of a new task?</h3>
+                    <button onclick="slidingform()">
+                        <i class="fas fa-plus"></i>
+                        <p>New task</p>
+                    </button>
+                </div>
+            </div>
+            <div class="left-box newtaskform">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/images/todolist.png" alt="todolist logo">
+                        <h1>To Do</h1>
+                    </a>
+                </div>
+                <div class="left-text-button-area">
+                    <h3>Add Task</h3>
+                    <form action="#">
+                        <label for="id"></label>
+                        <input type="text" id="id" placeholder="ID" class="display-none">
+                        <label for="title"></label>
+                        <input type="text" id="title" placeholder="Title">
+                        <label for="description"></label>
+                        <input type="text" id="description" placeholder="Description">
+                        <div class="task-status">
+                            <h5>Task Status</h5>
+                            <input type="radio" id="recent" name="status" checked>
+                            <label for="recent">Recent</label>
+                            <input type="radio" id="onprogress" name="status"><br>
+                            <label for="onprogress">On progress</label>
+                            <input type="radio" id="complete" name="status">
+                            <label for="recent">Complete</label>
+                        </div>
+                        <div class="assigntask">
+                            <select name="userassign" id="userassign">
+                                <option value="ram">Ram</option>
+                                <option value="shyam">Shyam</option>
+                                <option value="hari">Hari</option>
+                            </select>
+                        </div>
+                    </form>
+                    <button onclick="addTask()">
+                        <i class="fas fa-plus"></i>
+                        <p>New task</p>
+                    </button>
+                    <button onclick="saveTask()" class="display-none">
+                        <i class="fas fa-save"></i>
+                        <p>Save task</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-section-area">
+            <div class="task-categories">
+                <div class="taskstatus recent">
+                    <!-- <div class="box">
+                        <h1>Task Number ${item.id}</h1>
+                        <h2>${item.title}</h2>
+                        <p>${item.description}</p>
+                        <p>Assigned to: ${item.userAssign}</p>
+                        <button onclick="editTask(${index})">Edit</button>
+                        <button onclick="deleteTask(${index})">Delete</button>
+                    </div> -->
+                </div>
+                <div class="taskstatus onprogress"></div>
+                <div class="taskstatus completed"></div>
+            </div>
+        </div>
+    </section>
+    <script src="todolist.js"></script>
+</body>
+</html>
